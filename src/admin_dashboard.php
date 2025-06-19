@@ -72,9 +72,6 @@ session_start();
                             <td><?= htmlspecialchars($row['end_date']); ?></td>
                             <td><?= htmlspecialchars($row['reason']); ?></td>
                             <td>
-                                <!-- <i class="fa-solid fa-check"></i>
-                                <i class="fa-solid fa-x"></i>
-                                <i class="fas fa-ellipsis-h"></i> -->
                                 <ul>
                                     <li><a href="#" class="accept">Accept</a></li>
                                     <li><a href="#" class="decline">Decline</a></li>
@@ -89,17 +86,18 @@ session_start();
         </div>
         <div class="dashboard">
             <ul class="oill">
-                <li class="oil"><a href="admin_dashboard.php">Dashboard</a></li>
-                <li class="oil"><a href="history.php">History</a></li>
-                <li class="oil">Settings</li>
+                <li class="oil"><a href="..\src\admin_dashboard.php">Dashboard</a></li>
+                <li class="oil"><a href="..\src\history.php">History</a></li>
+                <li class="oil"><a href="#">Settings</a></li>
             </ul>
+            <button class="btn"><a href="../src/logout.php">Logout</a></button>
         </div>
     </div>
 
     <footer>
         <div class="footer">
             <div class="f-tor">
-                <img src="/pix/logo-for-02-Innovations-lab-150x150.png" alt="logo" class="logo">
+                <img src="../pix/logo-for-02-Innovations-lab-150x150.png" alt="logo" class="logo">
                 <div>
                     <h3>02INNOVATION LAB NIG LTD</h3>
                     <p>RC1965167</p>

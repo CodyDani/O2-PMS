@@ -53,7 +53,7 @@ unset($_SESSION['messages']);
     </div>
     <div class="content">
         <form action="login_process.php" method="post">
-            <h2>Login as <?= htmlspecialchars($_SESSION['selected_role'] ?? 'Guest') ?> </h2>
+            <h2 class="login">Login as <?= htmlspecialchars($_SESSION['selected_role'] ?? 'Guest') ?> </h2>
 
             <?php
     foreach ($messages as $msg): ?>

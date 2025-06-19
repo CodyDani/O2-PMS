@@ -49,26 +49,32 @@
 
 ?>
 
+            <div class="logout" id="logout">
+                <i class="fa-solid fa-right-from-bracket" alt="logout"></i>
+            </div>
             <h2>Hi! <?php echo $_SESSION['name'] ?></h2>
             <p>You can request for permission, check your
                 permission status and view your history</p>
             <button id="openFormBtn">Submit Request</button>
         </div>
         <div class="popup-form" id="popupForm">
-            <form action="request_form.php" method="POST">
-                <div class="input-text">
-                    <input type="text" name="matric_no" placeholder="Matric Number">
+            <div class="close" id="closeFormBtn">
+                <i class="fa-solid fa-xmark" alt="closeform"></i>    
+            </div>
+        <form action="request_form.php" method="POST">
+            <div class="input-text">
+                    <input type="text" name="matric_no" placeholder="Matric Number" required>
                 </div>
                 <div class="input-text">
                     <label for="">Date to be absent</label>
-                    <input type="date" name="start_date">
+                    <input type="date" name="start_date" required>
                 </div>
                 <div class="input-text">
                     <label for="">Returning Date</label>
-                    <input type="date" name="end_date">
+                    <input type="date" name="end_date" required>
                 </div>
                 <div class="input-text">
-                    <textarea name="reason" placeholder="Reason for absence"></textarea>
+                    <textarea name="reason" placeholder="Reason for absence" required></textarea>
                 </div>
 
                 <button type="submit" id="closeFormBtn">Submit request</button>
@@ -99,7 +105,7 @@
             <td><?= $sn++; ?></td> <!-- Serial number increments with each row -->
             <td><?= date('d M Y h:i A', strtotime($row['submitted_at'])) ?></td>
             <td><?= htmlspecialchars($row['reason']); ?></td>
-            <td><?= htmlspecialchars($row['status']); ?></td>
+            <td class="pend"><?= htmlspecialchars($row['status']); ?>Pending...</td>
         </tr>
     <?php endwhile; ?>
 </table>
@@ -160,14 +166,14 @@
         document.getElementById('openFormBtn').onclick = function () {
             document.getElementById('popupForm').classList.add('active');
         };
-
-        // let btn = document.getElementById('closeFormBtn');
-
-        // function button() {
-        //     alert('Request Sent Successfully');
-        // }
-        // btn.addEventListener('click', button);
-
+        document.getElementById('closeFormBtn').onclick = function () {
+            document.getElementById('popupForm').classList.remove('active');
+        };
+        document.getElementById('logout').onclick = function () {
+            if (confirm("Are you sure you want to logout?")) {
+                window.location.href = "logout.php";
+            }
+        };
     </script>
     <script src="https://kit.fontawesome.com/02164bf396.js" crossorigin="anonymous"></script>
 </body>

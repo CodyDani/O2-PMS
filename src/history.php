@@ -72,8 +72,10 @@
             <ul class="oill">
                 <li class="oil"><a href="../src/admin.html">Dashboard</a></li>
                 <li class="oil"><a href="../src/admin-history.html">History</a></li>
-                <li class="oil">Settings</li>
+                <li class="oil"><a href="#">Settings</a></li>
             </ul>
+                        <button class="btn"><a href="../src/logout.php">Logout</a></button>
+
         </div>
     </div>
 
