@@ -1,0 +1,301 @@
+
+.contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content {
+    margin: 30px auto;
+    width: 400px;
+    height: 100vh;
+    border-radius: 30px;
+}
+
+
+.card-hold {
+    width: 60%;
+    height: 400px;
+    display: flex;
+    margin: 30px auto;
+    background-color: rgb(6, 33, 124);
+}
+
+.card-1 {
+    margin: auto;
+    width: 50%;
+    height: 100%;
+    background: rgb(246, 90, 0);
+    border-bottom-left-radius: 200px;
+    border-top-right-radius: 200px;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-1 h1,
+.card-1 strong {
+    color: rgb(6, 33, 124);
+    text-align: center;
+
+}
+
+.card-1 p {
+    color: white;
+    text-align: center;
+
+}
+
+.card-1 .card-1-text {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.card-2 {
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card-2 .admin {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+}
+
+.card-2 p {
+    color: white;
+}
+
+form label {
+    font-size: 16px;
+    color: white;
+    display: flex;
+    margin: 10px;
+}
+
+
+
+textarea {
+    min-width: 100%;
+    min-height: 30px;
+    max-width: 100%;
+    max-height: 30px;
+    outline: none;
+    color: white;
+    background: transparent;
+    border: none;
+}
+
+
+textarea::placeholder {
+    color: white;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+.welcome {
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    background-color: rgb(6, 33, 124);
+    border-radius: 30px;
+    box-shadow: 4px 4px 10px black;
+}
+
+.welcome h2 {
+    color: rgb(246, 90, 0);
+    width: 80%;
+}
+
+.welcome p {
+    width: 80%;
+}
+
+
+.popup-form {
+    width: 500px;
+    height: 800px;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: rgb(6, 33, 124, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+
+}
+
+.popup-form.active {
+    display: flex;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 30px;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    border: 1px solid black;
+}
+
+td i {
+    background: white;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: black;
+
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+/* Admin styles */
+
+.admin-dashboard {
+    margin: 30px auto;
+    width: 80%;
+    height: 400px;
+    display: flex;
+}
+
+.admin-content {
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    background: #92929265;
+    width: 80%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+.admin-content .history {
+    width: 80%;
+
+}
+
+.admin-content .history td ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    text-decoration: none;
+}
+
+.admin-content .history td a {
+    text-decoration: none;
+    color: #1f2937;
+}
+
+.admin-content .history td .accept {
+    background: #098d09;
+    color: #fff;
+    border: 2px solid #ffffff;
+    padding: 5px;
+}
+
+.admin-content .history td .accept:hover {
+    background: #098d09;
+    color: #fff;
+    border: 2px solid #098d09;
+}
+
+.admin-content .history td .accepted {
+    background: #1f2937;
+    color: #fff;
+    border: #1f2937;
+    padding: 5px;
+}
+
+.admin-content .history td .accepted:hover {
+    background: #1f2937;
+    color: #fff;
+    border: #1f2937;
+}
+
+
+
+.admin-content .history td .decline {
+    background: #ff0202;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 5px;
+}
+
+.admin-content .history td .decline:hover {
+    background: #ff0202;
+    border: 2px solid #ff0202;
+    color: #fff;
+}
+
+.admin-content .history td .disable:hover {
+    border: 2px solid #fff;
+}
+
+
+
+.admin-content .history td .ellipse {
+    cursor: pointer;
+    font-size: 30px;
+}
+
+
+
+.dashboard {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background: #1f2937;
+    width: 20%;
+    height: 100%;
+}
+
+.dashboard .oil {
+    list-style: none;
+    display: flex;
+    padding-left: 30px;
+    color: #fff;
+}
+
+.dashboard .oil:hover {
+    border-bottom: none;
+    font-weight: bolder;
+}
+
+.dashboard .oil a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.admin-content .history h1 {
+    margin: 30px 0 -30px 0;
+}
